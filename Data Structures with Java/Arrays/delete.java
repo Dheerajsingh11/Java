@@ -6,13 +6,13 @@ public class delete {
         for (int i = 0; i < 10; i++) {
             arr[i] = i;
         }
-        int n = delete(arr, 10, 5);
+        int n = deleteArray(arr, 10, 5);
         for (int i = 0; i < n; i++) {
             System.out.println(arr[i]);
         }
     }
 
-    static int delete(int arr[], int n, int element) {
+    static int deleteArray(int arr[], int n, int element) {
         int i = 0;
         for (i = 0; i < n; i++) {
             if (arr[i] == element) {
