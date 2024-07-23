@@ -13,7 +13,7 @@ public class delete {
     }
 
     static int deleteArray(int arr[], int n, int element) {
-        int i = 0;
+        int i;
         for (i = 0; i < n; i++) {
             if (arr[i] == element) {
                 break;

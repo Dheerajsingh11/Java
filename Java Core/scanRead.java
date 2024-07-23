@@ -1,23 +1,25 @@
+
 import java.util.Scanner;
 
 public class scanRead {
+
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        String s1 = s.nextLine();
-        System.out.println("Input: " + s1);
+        try (Scanner s = new Scanner(System.in)) {
+            String s1 = s.nextLine();
+            System.out.println("Input: " + s1);
 
-        int i = s.nextInt();
-        System.out.println("Input: " + i);
+            int i = s.nextInt();
+            System.out.println("Input: " + i);
 
-        float f = s.nextFloat();
-        System.out.println("Input: " + f);
+            float f = s.nextFloat();
+            System.out.println("Input: " + f);
 
-        double d = s.nextDouble();
-        System.out.println("Input: " + d);
+            double d = s.nextDouble();
+            System.out.println("Input: " + d);
 
-        boolean b = s.nextBoolean();
-        System.out.println("Input: " + b);
-        s.close();
+            boolean b = s.nextBoolean();
+            System.out.println("Input: " + b);
+        }
     }
 }
 

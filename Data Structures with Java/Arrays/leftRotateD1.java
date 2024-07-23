@@ -20,7 +20,7 @@ public class leftRotateD1 {
     }
 
     static void rotate(int[] arr, int d) {
-        int n = arr.length;
+        // int n = arr.length;
         for (int i = 0; i < d; i++) {
             rotateBy1(arr);
         }
