@@ -113,7 +113,7 @@ public class fibonacci {
 
 ## Contributing
 
-We welcome contributions to enhance this repository. Please follow these steps to contribute:
+I welcome contributions to enhance this repository. Please follow these steps to contribute:
 
 1. **Fork the repository.**
 2. **Create a new branch:**
@@ -130,16 +130,15 @@ We welcome contributions to enhance this repository. Please follow these steps t
     ```
 5. **Create a new Pull Request.**
 
-For more detailed contributing guidelines, please refer to [CONTRIBUTING.md](CONTRIBUTING.md).
-
 ## Acknowledgements
 
 - [GeeksforGeeks](https://www.geeksforgeeks.org/) - For providing detailed explanations and examples.
 - [Stack Overflow](https://stackoverflow.com/) - For community support and discussion.
 - [Java Point](https://www.javatpoint.com/java-tutorial) - For Basic Java tutorials
+- Will add more as we move forward with this repository
 
 ## Contact
 
-For any questions or feedback, please contact [dheerajsinghchauhan05@gmail.com).
+For any questions or feedback, please contact [dheerajsinghchauhan05@gmail.com](dheerajsinghchauhan05@gmail.com).
 
 ---
