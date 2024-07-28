@@ -1,4 +1,4 @@
-
+// Basic recursion function
 public class recursion {
 
     static void fun1(int n) {
@@ -11,7 +11,7 @@ public class recursion {
 
     public static void main(String[] args) {
         System.out.println("Main");
-        fun1(5);
+        fun1(5); // calling the fun1
         System.out.println("After Fun1");
     }
 }
