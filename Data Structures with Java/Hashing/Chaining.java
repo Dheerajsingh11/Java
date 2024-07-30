@@ -46,3 +46,9 @@ public class Chaining {
         }
     }
 }
+ //  Load factore: a = n/m. a - load factor, n = number of keys to be inserted, m = number of slots in the hash table
+ //  When load factor becomes greater than 0.7, we need to increase the size of the hash table.
+ //  Increasing the size of the hash table increases the load factor and also increases the time complexity of insert, search, and delete operations.
+ //  However, increasing the size of the hash table can lead to a higher memory usage.
+ //  To optimize the load factor and memory usage, we can use a probing technique to handle collisions.
+ // Time complexity: O(1 + a) - for search insert and delete operations
