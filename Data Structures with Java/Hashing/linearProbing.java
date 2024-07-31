@@ -64,5 +64,23 @@ class myHash{
     }
 
 public class linearProbing {
-    
+    public static void main(String[] args) {
+        myHash mh = new myHash(7);
+        mh.insert(49);
+        mh.insert(30);
+        if(mh.search(30)== true){
+            System.out.println("Element found");
+        }
+        else{
+            System.out.println("Element not found");
+        }
+        mh.delete(30);
+        if(mh.search(30)== true){
+            System.out.println("Element found after deletion");
+        }
+        else{
+            System.out.println("Element not found after deletion");
+        }
+    }
+
 }
