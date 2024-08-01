@@ -1,5 +1,5 @@
 // return the size of longest subarray with given sum
-public class longestSubArr {
+public class longestSubArrNaive {
     public static void main(String[] args) {
         int arr[] = {1,1,2,3,4,5,3,7};
         int sum = 10;
@@ -20,3 +20,5 @@ public class longestSubArr {
     return res;
     }
 }
+
+// Time complexity: O(n^2)
