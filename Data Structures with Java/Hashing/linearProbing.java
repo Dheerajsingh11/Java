@@ -1,20 +1,21 @@
+// Program to create my own Hash
 class myHash{
-    int[] arr;
+    int[] arr; // initializing the array for the Hash
     int size, cap ;
-    myHash(int c){
+    myHash(int c){ // constructor to create a new Hash
         cap = c;
         size = 0;
-        arr = new int[cap];
+        arr = new int[cap]; // creating the array with given capacity
         for(int i = 0; i< cap; i++){
             arr[i] = -1; // Initialize all slots as empty
         }
     }
 
-        int hash(int key){
+        int hash(int key){ // function for getting hash function to get the position for a key
             return key % cap; // simple hash function
         }
 
-        boolean search(int key){
+        boolean search(int key){ // function to search for a key
             int h = hash(key);
             int i = h;
             while(arr[i]!= -1){
@@ -28,7 +29,7 @@ class myHash{
             return false;
         }
 
-        boolean insert(int key){
+        boolean insert(int key){ // function to insert a key into the Hash
             if(size==cap){
                 return false;
             }
@@ -46,7 +47,7 @@ class myHash{
             }
         }
 
-        boolean delete(int key){
+        boolean delete(int key){ // function to delete a key from the Hash
             int i = hash(key);
             while(arr[i]!= -1){
                 if(arr[i] == key){
@@ -65,10 +66,10 @@ class myHash{
 
 public class linearProbing {
     public static void main(String[] args) {
-        myHash mh = new myHash(7);
-        mh.insert(49);
+        myHash mh = new myHash(7); // object mh to create a Hash
+        mh.insert(49); // insert a key
         mh.insert(30);
-        if(mh.search(30)== true){
+        if(mh.search(30)== true){ // find a key
             System.out.println("Element found");
         }
         else{
