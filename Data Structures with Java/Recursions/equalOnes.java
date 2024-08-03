@@ -24,3 +24,4 @@ public class equalOnes {
 }
 
 // Time complexity: THETA(n^2)
+// space complexity: THETA(1)
