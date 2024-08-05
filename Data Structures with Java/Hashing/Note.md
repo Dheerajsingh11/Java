@@ -47,3 +47,5 @@
 - With 23 people in the room, there is 50% chance that there is someone in the room with same birthdays
 - With 70 people, possiblity is 99.9%
 - **Collision is bound to happen if we don't know the keys**
+
+### More
