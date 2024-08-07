@@ -18,3 +18,6 @@ public class binarySearchRecursive {
         }
     }
 }
+
+// Time complexity: O(log(n))
+// Auxiliary space: O(log(n))
