@@ -1,6 +1,6 @@
 // Merge Sort Algorithm
 
-public class mergeSort {
+public class mergeSorting {
     public static void main(String[] args) {
         int arr[] = { 1, 3, 2, 8, 4, 5 };
         mergeSort(arr, 0, arr.length - 1);
