@@ -42,3 +42,23 @@ public class quickSortHoare {
 // Worst Case: O(n^2)
 // Best Case: THETA(log(n))
 // Average Case: O(nlog(n))
+
+// Tail Call Elimination
+// Current Quick Sort function:
+// static void quickSort(int[] arr, int l, int h) {
+// if (l < h) {
+// int p = hoarePart(arr, l, h);
+// quickSort(arr, l, p - 1);
+// quickSort(arr, p + 1, h);
+// }
+// }
+
+// Re-written
+// static void quickSort(int[] arr, int l, int h) {
+// Begin:
+// if (l < h) {
+// int p = hoarePart(arr, l, h);
+// quickSort(arr, l, p);
+// l = p+1;
+// goto Begin;
+// }
