@@ -14,6 +14,10 @@ public class countingSortEff {
     static void countSort(int[] arr, int n, int k) {
         int[] count = new int[k];
 
+        for (int i = 0; i < k; i++) {
+            count[i] = 0;
+        }
+
         for (int i = 0; i < n; i++) {
             count[arr[i]]++;
         }
