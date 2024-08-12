@@ -26,3 +26,6 @@ public class traverseLinkedList {
         }
     }
 }
+
+// Time complexity: O(n)
+// Auxiliary space: O(n)
