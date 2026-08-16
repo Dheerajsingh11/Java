@@ -19,10 +19,28 @@ Welcome to the Java Algorithms Repository! This project contains a collection of
 
 ## Features
 
-- Basic and Advanced core Java
-- Implementations of common algorithms (sorting, searching, etc.)
-- Data structures (linked lists, trees, graphs, etc.)
-- Code examples and explanations
+- Basic and Advanced core Java, organized into numbered topic folders under `Java Core/`
+- Implementations of common algorithms (sorting, searching, graphs, DP, greedy, backtracking, etc.)
+- Data structures (linked lists, stacks, queues, trees, heaps, tries, disjoint sets, graphs)
+- **Three optimization tiers** for many problems — `Naive` / `Medium` / `Efficient` — each fully
+  commented with intuition, complexity, and trade-offs (see [`CONVENTIONS.md`](CONVENTIONS.md))
+- A `Note.md` in every topic folder explaining the theory, complexity, and when to use it
+
+## Repository structure
+
+```
+Java Core/
+  01-Basics  02-Operators  03-ControlFlow  04-Strings  05-Arrays  06-Methods
+  07-OOP  08-Exceptions  09-Collections  10-Generics  11-Functional  12-Advanced
+
+Data Structures with Java/
+  Arrays  Hashing  Linked List  Recursions  Searching  Sorting
+  Stack  Queue  Trees  Heap  Graphs  DisjointSet
+  Greedy  DynamicProgramming  Backtracking  BitManipulation  Math  Strings
+```
+
+Every `.java` file has a header block (Problem / Approach / Intuition / Time-Space / Trade-off),
+detailed inline comments, and a runnable `main` with expected output.
 
 ## Installation
 

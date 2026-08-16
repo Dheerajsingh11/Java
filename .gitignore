@@ -1,0 +1,83 @@
+# ==========================================================================
+#  Java Algorithms Repository — .gitignore
+#  Goal: commit ONLY source (.java) and docs (.md, LICENSE); never commit
+#  compiled output, build junk, IDE settings, OS clutter, or secrets.
+# ==========================================================================
+
+# ---- Compiled Java output ----
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# ---- JVM crash / diagnostic logs ----
+hs_err_pid*
+replay_pid*
+*.hprof
+
+# ---- Build output directories ----
+bin/
+out/
+build/
+target/
+classes/
+
+# ---- Build tools (Maven / Gradle) ----
+.gradle/
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# ---- IDE / editor config ----
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+*.ctxt
+# NetBeans
+nbproject/
+nbactions.xml
+# VS Code
+.vscode/
+# Vim / Emacs backups & swap files
+*.swp
+*.swo
+*~
+\#*\#
+
+# ---- OS-generated files ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---- Logs & temp ----
+*.log
+*.tmp
+tmp/
+temp/
+
+# ---- Secrets / credentials (NEVER commit these) ----
+# Defensive guards even though the repo currently contains none.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+secrets.*
+credentials.*
+*.secret
