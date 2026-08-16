@@ -119,3 +119,7 @@ because `null` is its "empty" signal.
 **BFS** on graphs and trees; CPU, disk, and print scheduling; message brokers (Kafka, RabbitMQ);
 producer–consumer pipelines and thread pools (`BlockingQueue`); network packet buffers; rate limiting;
 keyboard and event buffers; and streaming/ring buffers in audio and video.
+
+## Also in this folder
+
+`slidingWindowMaximum` — the monotonic **deque**, and why this problem needs both ends.

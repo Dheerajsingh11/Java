@@ -97,3 +97,7 @@ functions** (finding a maximum/minimum), not membership testing.
 Database indexes (B-trees generalize binary search), `Arrays.binarySearch` /
 `Collections.binarySearch`, `git bisect` (binary search over commits), autocomplete (tries — see
 `Trees/Trie.java`), and rate/threshold tuning via binary search on the answer.
+
+## Also in this folder
+
+`interpolationSearch` (O(log log n) on uniform data) · `searchIn2DMatrix` (flat binary search vs the top-right staircase walk).

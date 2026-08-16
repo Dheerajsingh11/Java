@@ -148,3 +148,7 @@ expected (a memory-leak source). Prefer `static` nested unless you need the link
 Domain modelling (User, Order, Account); frameworks and plugin systems (interfaces as extension
 points); GUI toolkits; design patterns (Strategy, Factory, Observer are all polymorphism); ORM
 entity mapping; and essentially every large Java codebase.
+
+## Also in this folder
+
+`EqualsAndHashCode` (the contract, and what breaks without it) · `AccessModifiers` (the visibility table) · `ImmutableClass` (the five rules, incl. defensive copying).

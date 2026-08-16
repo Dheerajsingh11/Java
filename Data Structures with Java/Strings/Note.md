@@ -127,3 +127,7 @@ sliding-window substring problems.
 Text editors and IDE search, `grep` and `ripgrep`, DNA sequence alignment, spam and plagiarism
 detection, intrusion-detection signature matching, spell-checkers (with tries and edit distance),
 compilers' lexical analysis, and log processing.
+
+## Also in this folder
+
+`zAlgorithm` (linear matching via the Z-box; also gives periodicity and LCP) · `longestPalindromicSubstring` (three tiers; why two centre kinds are needed).

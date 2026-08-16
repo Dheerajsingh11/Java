@@ -136,3 +136,7 @@ O(n)) · `AVLTree` · `Trie` · `SegmentTree` · `FenwickTree`
 Database indexes (B-trees/B+trees — a generalization of BSTs for disk), file systems, `TreeMap`/
 `TreeSet`, compilers (abstract syntax trees), the HTML DOM, routing tables, Huffman coding
 (`Greedy/`), decision trees in ML, spatial indexes (quadtrees, k-d trees), and Git's object model.
+
+## Also in this folder
+
+`RedBlackTree` (relaxed balancing, fewer rotations than AVL) · `validateBST` (why the naive per-node check is wrong) · `treeViews` (level order, zigzag, left/right/top views)

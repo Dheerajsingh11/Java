@@ -127,3 +127,7 @@ Puzzle solvers (Sudoku, crosswords, mazes, N-Queens); constraint satisfaction an
 regular-expression backtracking engines; parser exploration of ambiguous grammars; combinatorial
 generation for testing; game AI move search (with alpha-beta pruning, which is backtracking plus
 bounds); and circuit/layout design.
+
+## Also in this folder
+
+`wordSearch` — grid path search; demonstrates why the un-choose step is mandatory.

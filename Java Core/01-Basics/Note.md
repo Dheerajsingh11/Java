@@ -131,3 +131,7 @@ usually a bad trade.* Reach for them only when a measured constraint demands it.
 These primitives and I/O basics underpin everything: arrays and collections store them, algorithms
 manipulate them, and the overflow/division traps here are the root cause of real bugs in the
 algorithm folders (binary search midpoint overflow, sieve `p*p` overflow, comparator subtraction).
+
+## Also in this folder
+
+`typeCasting` (widening vs narrowing, silent truncation) · `varAndFinal` (what `final` does *not* freeze) · `wrapperClasses` (autoboxing, the Integer cache `==` trap).

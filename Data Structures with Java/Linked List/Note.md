@@ -119,3 +119,7 @@ looks like magic; it is arithmetic. `detectCycle.java` implements both phases.
 Stack/queue/deque implementations, adjacency lists for graphs, **LRU caches** (doubly linked list +
 hash map), undo/redo histories, music and image carousels (circular), free-block lists in memory
 allocators, and blockchain (each block references the previous).
+
+## Also in this folder
+
+`LRUCache` — HashMap + doubly linked list; the definitive reason a doubly linked list earns its extra pointer.
