@@ -77,6 +77,28 @@ worth more in practice than worst-case bounds suggest.
 - **Writes are expensive** (flash/EEPROM wear) → **cycle sort** — provably minimal writes.
 - **Data exceeds RAM** → external **merge sort** — it streams sequentially and merges runs.
 
+## When NOT to sort
+
+Sorting is O(n log n) — sometimes that is more than the problem needs:
+
+- **You only need the k-th element or the top k** → **quickselect** is O(n) average
+  (`Questions/kthSmallestElementEfficient`), or a size-k heap is O(n log k) (`Heap/kLargestElements`).
+  Sorting everything to read one position is wasteful.
+- **You only need the max/min** → one O(n) pass.
+- **You only need membership or duplicate detection** → a `HashSet` is O(n) and does not need order.
+- **The data is already sorted or nearly so** → detect it; TimSort and insertion sort exploit
+  existing runs. Do not re-sort defensively.
+- **You must preserve the original order** → sorting mutates the array. Sort a copy, or sort an index
+  array instead.
+- **The data does not fit in memory** → an ordinary sort will thrash; use external merge sort.
+
+## Where sorting is used
+
+Databases (`ORDER BY`, index construction, sort-merge joins); deduplication; preparing data for
+binary search; leaderboards and rankings; scheduling by priority or deadline; merging log streams by
+timestamp; compression (BWT); computational geometry (sweep-line algorithms); and as the setup step
+for the interval and two-pointer problems in `Questions/`.
+
 ## Why quicksort is usually fastest despite a worse worst case
 
 Big-O hides constants. Quicksort partitions **in place** with a tight inner loop and sequential
