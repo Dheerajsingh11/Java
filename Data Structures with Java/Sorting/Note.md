@@ -135,3 +135,7 @@ sign, sort 0/1/2, k-th smallest (quickselect), merge intervals, max concurrent g
   and empty inputs — and ideally compare against `Arrays.sort` on random data.
 - `o1.start - o2.start` in a comparator can **overflow**; use `Integer.compare`.
 - An inconsistent comparator can make `TreeMap`/`TreeSet` silently lose elements.
+
+## Also in this folder
+
+`timSort` — the insertion-sort + merge hybrid Java uses for object arrays.

@@ -153,3 +153,7 @@ GPS and routing (Dijkstra/A*), internet routing protocols (Bellman-Ford underlie
 and package managers (topological sort), social networks (BFS for degrees of separation), web crawling
 and PageRank, network design (MST), compilers (dependency and dataflow analysis), and deadlock
 detection (cycle detection in a wait-for graph).
+
+## Also in this folder
+
+`numberOfIslands` (a grid *is* a graph) · `bipartiteCheck` (2-colouring; bipartite ⟺ no odd cycle) · `stronglyConnectedComponents` (Kosaraju; why reversing the edges works).

@@ -117,3 +117,7 @@ scan into one sweep.
 - Summing a large `int[]` can **overflow** — accumulate into a `long`.
 - Arrays are objects: `arr2 = arr1` copies the *reference*, not the data. Use `Arrays.copyOf`.
 - `Arrays.equals` compares contents; `==` compares references.
+
+## Also in this folder
+
+`matrixOperations` — spiral traversal, in-place 90° rotation (transpose + reverse), and set-zeroes using the first row/column as markers.

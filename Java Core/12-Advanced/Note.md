@@ -164,9 +164,9 @@ collection that only ever grows, an unremoved listener, or an inner class holdin
 
 ## Further topics (not yet covered here)
 
-`ExecutorService` and thread pools · `CompletableFuture` · `java.time` (the modern date/time API,
-replacing the broken `Date`/`Calendar`) · annotations and reflection (how Spring, JUnit and Jackson
-work) · sealed classes and pattern matching · the module system.
+`CompletableFuture` for composable async pipelines; **virtual threads** (Java 21) for very large
+numbers of blocking tasks; NIO channels and selectors for high-performance networking; the module
+system; and the Java Memory Model in detail.
 
 ## Pitfalls
 
@@ -182,3 +182,7 @@ work) · sealed classes and pattern matching · the module system.
 
 Concurrency underpins every server and UI framework; NIO underpins all file and network handling; and
 the stack/heap model explains recursion limits and object lifetimes throughout this repository.
+
+## Also in this folder
+
+`DateTimeDemo` (java.time; Duration vs Period) · `ExecutorServiceDemo` (thread pools, Future, AtomicInteger) · `AnnotationsReflection` (a miniature test runner) · `SealedAndPatternMatching` (compile-time exhaustive switches).

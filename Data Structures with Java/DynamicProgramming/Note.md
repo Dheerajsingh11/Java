@@ -128,3 +128,7 @@ O(n log n) patience method), `coinChange`, `editDistance`
 alignment (Levenshtein/Needleman-Wunsch); resource allocation and budgeting (knapsack); text
 justification in typesetting; speech recognition (Viterbi); reinforcement learning (Bellman
 equations); and shortest-path algorithms — **Bellman-Ford and Floyd-Warshall are dynamic programming**.
+
+## Also in this folder
+
+`matrixChainMultiplication` (interval DP — the state is a *range*) · `subsetSum` (three tiers; the backwards sweep that enforces 0/1).

@@ -107,3 +107,7 @@ The **call stack** itself (every function call pushes a frame — and recursion 
 this); compilers and parsers checking balanced syntax; expression evaluation in calculators and
 virtual machines (the JVM is a stack machine); undo/redo in editors; browser history;
 iterative DFS and backtracking; and the "unwinding" phase of exception handling.
+
+## Also in this folder
+
+`largestRectangleHistogram` — the hardest of the monotonic-stack problems.

@@ -113,3 +113,7 @@ Scheduling (CPU, meetings, jobs), **Huffman compression** (ZIP, JPEG, MP3), netw
 (Dijkstra), network design (MST), cache eviction heuristics, change-making in point-of-sale systems,
 and as **approximation algorithms** for NP-hard problems where an exact answer is out of reach but a
 provably-close greedy answer is acceptable.
+
+## Also in this folder
+
+`huffmanCoding` — optimal prefix-free codes; the exchange argument and why prefix-freeness makes decoding unambiguous.
