@@ -26,10 +26,13 @@ public class segregatePosNegEfficient {
         while (true) {
             // Advance i past elements already correctly placed (negatives), stopping on the first
             // non-negative - which belongs on the right side.
-            do { i++; } while (arr[i] < 0);
+            // The "i < n - 1" bound is REQUIRED: without it, an array containing no non-negative
+            // element lets i run past the last index and throw ArrayIndexOutOfBoundsException.
+            do { i++; } while (i < n - 1 && arr[i] < 0);
 
             // Advance j left past correctly placed non-negatives, stopping on the first negative.
-            do { j--; } while (arr[j] >= 0);
+            // The "j > 0" bound guards the mirror case: an array with no negative element.
+            do { j--; } while (j > 0 && arr[j] >= 0);
 
             // Pointers crossed - every element has been assigned to the correct side.
             if (i >= j) {
@@ -43,7 +46,9 @@ public class segregatePosNegEfficient {
             arr[j] = temp;
         }
     }
-    // Safety note: the do-while loops rely on the crossing check to stop them running off the array.
-    // An all-negative or all-non-negative input is handled because one pointer reaches the other's
-    // sentinel position before any out-of-bounds access occurs.
+    // BOUNDS NOTE: the unguarded form of this algorithm (relying only on the i >= j crossing check)
+    // is a genuine bug, not a theoretical one. With an all-negative array the first do-while never
+    // finds a non-negative value and walks off the end; with an all-non-negative array the second
+    // walks below index 0. Both throw ArrayIndexOutOfBoundsException. The explicit index bounds
+    // above are what actually make the scan safe.
 }

@@ -27,6 +27,7 @@ public class leftRotateD3 {
 
     static void rotate(int[] arr, int d) {
         int n = arr.length;
+        if (n == 0) return;           // guard before the modulo - "d % 0" throws ArithmeticException
         d = d % n;                    // normalize so d > n (or d == n) behaves correctly
         if (d == 0) return;           // nothing to do
 
