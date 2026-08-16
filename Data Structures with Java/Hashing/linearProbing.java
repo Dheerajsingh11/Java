@@ -15,6 +15,12 @@
 // Slot encoding used throughout:
 //   -1 = EMPTY  (never used)      -> search may stop here; insert may use it
 //   -2 = DELETED ("tombstone")    -> search must CONTINUE past it; insert may reuse it
+//
+// LIMITATION - in-band sentinels: because -1 and -2 double as markers, this table cannot store the
+// actual VALUES -1 or -2. Inserting -1 would be read back as "empty slot", truncating every probe
+// path through it and silently losing keys. Real implementations avoid this by keeping slot state
+// in a separate array (or by using an Integer[] where null means empty), which frees the entire
+// value range. The sentinel approach is kept here because it keeps the algorithm visible.
 class myHash {
     int[] arr;
     int size, cap;
@@ -29,7 +35,10 @@ class myHash {
     }
 
     int hash(int key) {
-        return key % cap;                // map the key to a starting slot
+        // Math.floorMod, NOT '%'. In Java the % operator keeps the sign of the dividend, so
+        // -3 % 7 == -3 and a plain modulo would produce a NEGATIVE array index for negative keys
+        // (ArrayIndexOutOfBoundsException). floorMod always returns a value in [0, cap).
+        return Math.floorMod(key, cap);
     }
 
     boolean search(int key) {
@@ -49,16 +58,34 @@ class myHash {
 
     boolean insert(int key) {
         if (size == cap) return false;                  // table full - open addressing cannot grow
-        int i = hash(key);
-        // Walk until we find a slot that is EMPTY (-1), a TOMBSTONE (-2, reusable), or the key itself.
-        while (arr[i] != -1 && arr[i] != -2 && arr[i] != key) {
+
+        int h = hash(key);
+        int firstTombstone = -1;                        // best reusable slot seen so far (an index)
+
+        // Scan the probe path. We must NOT stop at the first tombstone: the key may already be
+        // stored further along, placed there before that slot was deleted. So we remember the
+        // tombstone and KEEP LOOKING until we hit a genuinely EMPTY slot (which proves absence)
+        // or return to the start.
+        int i = h;
+        do {
+            if (arr[i] == -1) break;                    // EMPTY -> key definitely not present
+            if (arr[i] == key) return false;            // already stored -> reject the duplicate
+            if (arr[i] == -2 && firstTombstone == -1) {
+                firstTombstone = i;                     // remember the earliest reusable slot
+            }
             i = (i + 1) % cap;
-        }
-        if (arr[i] == key) return false;                // no duplicates allowed
-        arr[i] = key;
+        } while (i != h);                               // stop after a full circle
+
+        // Prefer the earliest tombstone (keeps probe paths short); otherwise use the empty slot.
+        int target = (firstTombstone != -1) ? firstTombstone : i;
+        arr[target] = key;
         size++;
         return true;
     }
+    // WHY the two-phase scan: stopping at the first tombstone would insert a SECOND copy of a key
+    // that already exists later on the same probe path. Concretely, with cap = 7: insert(0) takes
+    // slot 0, insert(7) collides and probes to slot 1, delete(0) turns slot 0 into a tombstone -
+    // then a naive insert(7) would stop at slot 0 and store 7 twice.
 
     boolean delete(int key) {
         int h = hash(key);

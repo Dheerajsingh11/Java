@@ -27,9 +27,13 @@ public class leftRotateD1 {
     }
 
     static void rotate(int[] arr, int d) {
-        // Normalize first: rotating by n returns the array to its original state, so only d % n
+        // Guard the empty array BEFORE the modulo - "d % 0" throws ArithmeticException.
+        if (arr.length == 0) return;
+
+        // Normalize: rotating by n returns the array to its original state, so only d % n
         // actually matters. Without this, a large d wastes full passes doing nothing.
         d = d % arr.length;
+        if (d == 0) return;                 // nothing to do (matches leftRotateD2 / leftRotateD3)
 
         // The costly part: d separate O(n) passes -> O(n*d) overall.
         for (int i = 0; i < d; i++) {

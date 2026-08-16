@@ -20,6 +20,7 @@ public class leftRotateD2 {
 
     static void rotate(int[] arr, int d) {
         int n = arr.length;
+        if (n == 0) return;              // guard before the modulo - "d % 0" throws
         d = d % n;                       // normalize: rotating by n is a no-op
         if (d == 0) return;
 
