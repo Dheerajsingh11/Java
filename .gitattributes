@@ -1,0 +1,34 @@
+# ==========================================================================
+#  Line-ending normalization
+#  Makes line endings DETERMINISTIC regardless of each contributor's
+#  core.autocrlf setting. This overrides autocrlf for the paths below.
+#
+#  Policy: text files are stored AND checked out with LF (Unix) endings.
+#  Java, Git, and modern Windows editors (VS Code, IntelliJ) all handle LF,
+#  so this keeps the repo consistent and silences the "LF will be replaced
+#  by CRLF" warning on Windows.
+# ==========================================================================
+
+# Auto-detect text files; store and check out with LF.
+* text=auto eol=lf
+
+# Be explicit for the file types in this repo.
+*.java   text eol=lf
+*.md     text eol=lf
+*.txt    text eol=lf
+*.gitignore     text eol=lf
+*.gitattributes text eol=lf
+
+# Windows batch/PowerShell scripts, if ever added, should keep CRLF.
+*.bat    text eol=crlf
+*.cmd    text eol=crlf
+*.ps1    text eol=crlf
+
+# Treat compiled/binary artifacts as binary (never convert).
+*.class  binary
+*.jar    binary
+*.war    binary
+*.png    binary
+*.jpg    binary
+*.gif    binary
+*.pdf    binary
